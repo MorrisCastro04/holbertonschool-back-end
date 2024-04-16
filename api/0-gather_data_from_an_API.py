@@ -22,8 +22,8 @@ def gather_data_from_API(user_id):
     for task in tasks:
         if task["completed"]:
             completed_tasks.append(task)
-    print(f"Employee {user_name} is done with \
-          tasks({len(completed_tasks)}/{number_tasks}): ")
+    print("Employee {} is done with tasks({}/{}):"
+          .format(user_name, len(completed_tasks), number_tasks))
     for task in completed_tasks:
         print("\t {}".format(task["title"]))
 
