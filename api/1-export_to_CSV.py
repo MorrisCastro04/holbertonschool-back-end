@@ -1,4 +1,5 @@
 #!/usr/bin/python3
+"""information about his/her todo list progress"""
 import csv
 import requests
 import sys
