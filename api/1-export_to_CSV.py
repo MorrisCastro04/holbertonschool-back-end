@@ -13,7 +13,7 @@ def gather_data_from_API(user_id):
     response = requests.get(
         f"https://jsonplaceholder.typicode.com/users/{user_id}")
     if response.status_code == 200:
-        user_name = response.json()["name"]
+        user_name = response.json()["username"]
     response2 = requests.get(
         f"https://jsonplaceholder.typicode.com/todos?userId={user_id}")
     if response2.status_code == 200:
