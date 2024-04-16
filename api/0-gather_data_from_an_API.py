@@ -19,7 +19,7 @@ def gather_data_from_API(user_id):
             completed_tasks.append(task)
     print(f"Employee {user_name} is done with tasks({len(completed_tasks)}/{number_tasks}):")
     for task in completed_tasks:
-        print(task["title"])
+        print("\t {}".format(task["title"]))
 
 
 if __name__ == '__main__':
