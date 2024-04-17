@@ -12,6 +12,7 @@ def list_of_todos():
     for user in users:
         users_id.append(user['id'])
 
+    data_dict = {}
     for ids in users_id:
         response = requests.get(
             f"https://jsonplaceholder.typicode.com/users/{ids}")
@@ -21,7 +22,7 @@ def list_of_todos():
 
         tasks = response2.json()
 
-        data_dict = {ids: []}
+        data_dict[ids] = []
         for task in tasks:
             json_format = {
                 "username": employee_name,
